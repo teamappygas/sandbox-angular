@@ -1,0 +1,4 @@
+<!-- We pass as property todo between [] of app-todo-item the value of the looping todo between "" -->
+<app-todo-item *ngFor="let todo of todos" [todo]="todo"> 
+    <li>{{ todo.title }}</li>
+</app-todo-item>
