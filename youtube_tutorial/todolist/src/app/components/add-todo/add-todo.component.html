@@ -1,0 +1,5 @@
+<form class="form" (ng-submit)="onSubmit()">
+    <!-- Ng model to bind the name of the input to the variable in the ts file -->
+    <input type="text" name="tile" [(ngModel)]="title" placeholder="Add Todo...">
+    <input type="submit" value="Submit" class="btn">
+</form>
