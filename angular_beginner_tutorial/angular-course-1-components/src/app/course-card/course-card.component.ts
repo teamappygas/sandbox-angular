@@ -11,7 +11,7 @@ export class CourseCardComponent implements OnInit {
 
   @Input()
   course: Course;
-  
+
   @Input()
   cardIndex: number;
 
@@ -25,6 +25,10 @@ export class CourseCardComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  isImageVisible() {
+    return (this.course && this.course.iconUrl);
   }
 
   onCourseViewed(): void {
