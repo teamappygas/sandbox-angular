@@ -11,12 +11,18 @@ export class CourseCardComponent implements OnInit {
 
   @Input()
   course: Course;
+  
+  @Input()
+  cardIndex: number;
 
   // tslint:disable-next-line: no-output-rename
   @Output('courseSelected')
   courseEmitter = new EventEmitter<Course>();
 
-  constructor() { }
+  constructor() {
+    console.log(this.cardIndex);
+
+   }
 
   ngOnInit(): void {
   }
