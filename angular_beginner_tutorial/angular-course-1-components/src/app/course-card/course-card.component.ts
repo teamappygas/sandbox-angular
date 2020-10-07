@@ -22,7 +22,7 @@ export class CourseCardComponent implements OnInit {
   constructor() {
     console.log(this.cardIndex);
 
-   }
+  }
 
   ngOnInit(): void {
   }
@@ -34,6 +34,12 @@ export class CourseCardComponent implements OnInit {
   onCourseViewed(): void {
     this.courseEmitter.emit(this.course);
 
+  }
+
+  cardClasses(): any {
+    return {
+      'beginner': this.course.category === 'BEGINNER'
+    };
   }
 
 }
