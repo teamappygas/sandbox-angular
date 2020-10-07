@@ -42,4 +42,10 @@ export class CourseCardComponent implements OnInit {
     };
   }
 
+  cardStyles(): any {
+    return {
+      'text-decoration': 'underline'
+    };
+  }
+
 }
