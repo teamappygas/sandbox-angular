@@ -16,6 +16,7 @@ import {CourseImageComponent} from '../course-image/course-image.component';
 import { CoursesService } from '../services/courses.service';
 
 @Component({
+    // tslint:disable-next-line: component-selector
     selector: 'course-card',
     templateUrl: './course-card.component.html',
     styleUrls: ['./course-card.component.css']
