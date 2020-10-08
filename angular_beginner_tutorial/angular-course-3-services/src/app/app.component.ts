@@ -14,7 +14,7 @@ import { CoursesService } from './services/courses.service';
 export class AppComponent implements OnInit {
 
 
-  courses;
+  courses$;
 
   constructor(private http: HttpClient,
     private coursesService: CoursesService) {
@@ -24,11 +24,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
 
     const params = new HttpParams()
+      .set('page', '1')
+      .set('pageSize', '10');
 
-    this.http.get('/api/courses')
-      .subscribe(
-        courses => this.courses = courses
-    );
+    this.courses$ = this.http.get('/api/courses', { params });
   }
 
 
