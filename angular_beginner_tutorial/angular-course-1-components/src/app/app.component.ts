@@ -10,6 +10,11 @@ import { COURSES } from '../db-data';
 export class AppComponent {
 
   courses = COURSES;
+  startDate = new Date(2000, 0, 1);
+  title = COURSES[1].description;
+  price = 9.9345359;
+  rate = 56;
+  course = COURSES[4];
 
 
   onCourseSelected(course: Course): void {

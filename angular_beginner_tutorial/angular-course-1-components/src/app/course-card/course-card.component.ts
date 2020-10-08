@@ -20,7 +20,6 @@ export class CourseCardComponent implements OnInit {
   courseEmitter = new EventEmitter<Course>();
 
   constructor() {
-    console.log(this.cardIndex);
 
   }
 
